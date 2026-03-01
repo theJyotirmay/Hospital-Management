@@ -35,7 +35,7 @@ function Report() {
 
   const fetchdata = async () => {
     try {
-      const response = await axios.get(`http://localhost:8080/single/${id}`, {
+      const response = await axios.get(`https://hospital-management-1-dahm.onrender.com/single/${id}`, {
         headers: {
           'Content-Type': 'application/json',
           authorization: localStorage.getItem('jwt'),
@@ -45,7 +45,7 @@ function Report() {
       setDatas(response.data.appointment);
 
       // Fetch patient history by getting all appointments and filtering
-      const historyRes = await axios.get('http://localhost:8080/appointments', {
+      const historyRes = await axios.get('https://hospital-management-1-dahm.onrender.com/appointments', {
         headers: {
           'Content-Type': 'application/json',
           authorization: localStorage.getItem('jwt'),
@@ -82,7 +82,7 @@ function Report() {
     }
     try {
 
-      const response = await axios.patch(`http://localhost:8080/update-date`, { _id: id, date: selectedDate }, {
+      const response = await axios.patch(`https://hospital-management-1-dahm.onrender.com/update-date`, { _id: id, date: selectedDate }, {
         headers: {
           'Content-Type': 'application/json',
           authorization: localStorage.getItem('jwt'),
@@ -105,7 +105,7 @@ function Report() {
     e.preventDefault();
 
     try {
-      const response = await axios.patch(`http://localhost:8080/update-medicine`, { _id: id, medicine, about, primary_diagnosis, investigation_advice, final_diagnosis, treatment }, {
+      const response = await axios.patch(`https://hospital-management-1-dahm.onrender.com/update-medicine`, { _id: id, medicine, about, primary_diagnosis, investigation_advice, final_diagnosis, treatment }, {
         headers: {
           'Content-Type': 'application/json',
           authorization: localStorage.getItem('jwt'),

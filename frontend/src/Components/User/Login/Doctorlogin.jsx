@@ -24,7 +24,7 @@ function LoginForm() {
   const onSubmit = async (values) => {
     // console.log(values);
     try {
-        const response= await axios.post ("http://localhost:8080/doctorsignin",values)
+        const response= await axios.post ("https://hospital-management-1-dahm.onrender.com/doctorsignin",values)
         console.log(response.data)
         
         if(response.status===200){

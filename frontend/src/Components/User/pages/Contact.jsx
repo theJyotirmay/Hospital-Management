@@ -27,7 +27,7 @@ const ContactUsPage = () => {
       message,
       contact,
     };
-    const response = await axios.post('http://localhost:8080/patient/patientmessage', data);
+    const response = await axios.post('https://hospital-management-1-dahm.onrender.com/patient/patientmessage', data);
     if (response.status === 200) {
       toast.success(response.data.message);
       navigate("/");

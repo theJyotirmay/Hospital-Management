@@ -9,7 +9,7 @@ import axios from "axios";
 }
 export const getpatient = createAsyncThunk('getacrt', async () => {
     try {
-      const response = await axios.get('http://localhost:8080/patient',{
+      const response = await axios.get('https://hospital-management-1-dahm.onrender.com/patient',{
         headers: {
             
             "authorization": localStorage.getItem("jwt")

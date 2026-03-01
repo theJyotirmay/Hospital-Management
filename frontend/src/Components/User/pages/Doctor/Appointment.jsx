@@ -54,7 +54,7 @@ export default function Cart() {
   const MakePayment = async (id) => {
     try {
       const response = await axios.post(
-        "http://localhost:8080/patient/payment",
+        "https://hospital-management-1-dahm.onrender.com/patient/payment",
         {
           status: "paid",
           _id: id,
@@ -96,7 +96,7 @@ export default function Cart() {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:8080/patient/create-razorpay-order",
+        "https://hospital-management-1-dahm.onrender.com/patient/create-razorpay-order",
         { amount },
         {
           headers: {

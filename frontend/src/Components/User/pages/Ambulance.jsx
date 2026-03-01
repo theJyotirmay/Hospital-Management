@@ -41,7 +41,7 @@ const AmbulanceBooking = () => {
     e.preventDefault();
     console.log(bookingInfo)
      try {
-        const response = await axios.post('http://localhost:8080/patient/ambulance', bookingInfo);
+        const response = await axios.post('https://hospital-management-1-dahm.onrender.com/patient/ambulance', bookingInfo);
         console.log(response)
     if(response.status === 200 ){
     toast.success(response.data.message);

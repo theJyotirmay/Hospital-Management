@@ -59,7 +59,7 @@ function SignUpForm() {
     console.log(values)
     try {
       const response = await axios.post(
-        "http://localhost:8080/signup",
+        "https://hospital-management-1-dahm.onrender.com/signup",
 
         values
       );
